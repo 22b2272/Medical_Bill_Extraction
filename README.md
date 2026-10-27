@@ -175,9 +175,10 @@ Then send a multipart upload to `http://localhost:8000/extract-bill-data` as sho
 
 ## Tests
 
-The tests use Python's built-in `unittest` and mock external OCR/LLM calls. They do not require API credentials, Tesseract execution, Poppler, or network access.
+The tests use Python's built-in `unittest` and mock external OCR/LLM calls. Install the development dependencies (including the compatible HTTP client version required by Starlette's test client), then run them. The tests do not require API credentials, Tesseract execution, Poppler, or network access.
 
 ```powershell
+python -m pip install -r requirements-dev.txt
 python -m unittest discover -s tests -v
 ```
 
